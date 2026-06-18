@@ -43,7 +43,6 @@ const Login = () => {
       )
         .then((userCredential) => {
           const user = userCredential.user;
-          console.log(user);
           updateProfile(user, {
             displayName: fullName.current.value,
           })
@@ -65,7 +64,6 @@ const Login = () => {
           const errorCode = error.code;
           const errorMessage = error.message;
           setErrorMsg(errorCode + "-" + errorMessage);
-          console.log(error);
         });
     } else {
       signInWithEmailAndPassword(
@@ -76,13 +74,11 @@ const Login = () => {
         .then((userCredential) => {
           // Signed in
           const user = userCredential.user;
-          console.log(user);
         })
         .catch((error) => {
           const errorCode = error.code;
           const errorMessage = error.message;
           setErrorMsg(errorCode + "-" + errorMessage);
-          console.log(error);
         });
     }
   };

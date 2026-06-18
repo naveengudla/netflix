@@ -12,7 +12,6 @@ const useNowPlayingMovies = () => {
       TMDB_API_KEY
     );
     const data = await response.json();
-    console.log("Now Playing Movies:", data.results);
     dispatch(setNowPlayingMovies(data.results));
   };
 

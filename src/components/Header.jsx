@@ -44,7 +44,7 @@ const Header = () => {
   };
 
   return (
-    <div className="fixed top-0 left-0 px-6 py-4 bg-gradient-to-b from-black to-transparent w-full z-20 flex justify-between items-center">
+    <div className="fixed top-0 left-0 px-6 py-4 bg-gradient-to-b from-black to-transparent w-full z-2000 flex justify-between items-center">
       <img className="w-44" src={HEADER_LOGO} alt="Netflix" />
       {user && (
         <div className="flex items-center flex-col gap-2">

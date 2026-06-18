@@ -12,7 +12,6 @@ const useUpcomingMovies = () => {
       TMDB_API_KEY
     );
     const data = await response.json();
-    console.log("Upcoming Movies:", data.results);
     dispatch(setUpcomingMovies(data.results));
   };
 

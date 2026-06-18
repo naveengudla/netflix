@@ -12,7 +12,6 @@ const useTopRatedMovies = () => {
       TMDB_API_KEY
     );
     const data = await response.json();
-    console.log("Top Rated Movies:", data.results);
     dispatch(setTopRatedMovies(data.results));
   };
 
