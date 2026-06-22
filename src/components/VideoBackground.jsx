@@ -7,7 +7,6 @@ const VideoBackground = ({ movieId }) => {
   useVideoTrailer(movieId);
   return (
     <div>
-      <div>Video Background</div>
       {trailerVideo && (
         <iframe
           className="inset-0 w-screen h-full object-cover aspect-video"

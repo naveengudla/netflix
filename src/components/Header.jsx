@@ -47,9 +47,16 @@ const Header = () => {
     <div className="fixed top-0 left-0 px-6 py-4 bg-gradient-to-b from-black to-transparent w-full z-2000 flex justify-between items-center">
       <img className="w-44" src={HEADER_LOGO} alt="Netflix" />
       {user && (
-        <div className="flex items-center flex-col gap-2">
-          <div className="text-white mr-2">{user.displayName}</div>
-          <button className="text-white cursor-pointer px-4 bg-red-400" onClick={handleLogout}>
+        <div className="flex items-center gap-6">
+          <div className="px-4 py-2 rounded-md backdrop-blur-sm">
+            <div className="text-white text-sm font-semibold">
+              Welcome, <span className="text-red-500">{user.displayName}</span>
+            </div>
+          </div>
+          <button
+            onClick={handleLogout}
+            className="px-6 py-2 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-md transition-all duration-300 transform hover:scale-105 cursor-pointer"
+          >
             Logout
           </button>
         </div>
